@@ -161,7 +161,7 @@ vector<int> InsertSort(vector<int> array){
  return array;
 }
 
-vector<int> llenarVector(int cantidad) {
+vector<int> llenarVector(long long int cantidad) {
     vector<int> array(cantidad);
     srand(time(nullptr));  
 
@@ -173,7 +173,7 @@ vector<int> llenarVector(int cantidad) {
 }
 
 int main(){
- vector<int> Prueba = llenarVector(5000);
+ vector<int> Prueba = llenarVector(500100);
  cout<< " 1. BubbleSort \n 2. QuickSort \n 3. HeapSort \n 4. MergeSort \n 5. SelectionSort \n 6. InsertionSort\n";
  cin >> menu;
  clock_t inicio, fin;
@@ -184,52 +184,51 @@ int main(){
             inicio = clock();
             BubbleSort(Prueba);
             fin = clock();     
-            tiempo = double(fin - inicio) * 1000.0 / CLOCKS_PER_SEC;  
-            cout << "Tiempo de ejecución: " << tiempo << " ms" << endl;
+            tiempo = double(fin - inicio) *1000 / CLOCKS_PER_SEC;  
+            cout <<  tiempo << " ms" << endl;
             break;
         }
         case 2: {
             inicio = clock();
             QuickSort(Prueba);
             fin = clock();     
-            tiempo = double(fin - inicio) * 1000.0 / CLOCKS_PER_SEC;  
-            cout << "Tiempo de ejecución: " << tiempo << " ms" << endl;
+            tiempo = double(fin - inicio) *1000/CLOCKS_PER_SEC;  
+            cout <<  tiempo << " ms" << endl;
             break;
         }
         case 3: {
             inicio = clock();
             HeapSort(Prueba);
             fin = clock();     
-            tiempo = double(fin - inicio) * 1000.0 / CLOCKS_PER_SEC;  
-            cout << "Tiempo de ejecución: " << tiempo << " ms" << endl;
+            tiempo = double(fin - inicio) *1000/ CLOCKS_PER_SEC;  
+            cout << tiempo << " ms" << endl;
             break;
         }
         case 4: {
             inicio = clock();
             MergeSort(Prueba, 0, Prueba.size() - 1);
             fin = clock();     
-            tiempo = double(fin - inicio) * 1000.0 / CLOCKS_PER_SEC;  
-            cout << "Tiempo de ejecución: " << tiempo << " ms" << endl;
+            tiempo = double(fin - inicio) *1000/ CLOCKS_PER_SEC;  
+            cout << tiempo << " ms" << endl;
             break;
         }
         case 5: {
             inicio = clock();
             SelectionSort(Prueba);
             fin = clock();     
-            tiempo = double(fin - inicio) * 1000.0 / CLOCKS_PER_SEC;  
-            cout << "Tiempo de ejecución: " << tiempo << " ms" << endl;
+            tiempo = double(fin - inicio) *1000/ CLOCKS_PER_SEC;  
+            cout << tiempo << " ms" << endl;
             break;
         }
         case 6: {
             inicio = clock();
             InsertSort(Prueba);
             fin = clock();     
-            tiempo = double(fin - inicio) * 1000.0 / CLOCKS_PER_SEC;  
-            cout << "Tiempo de ejecución: " << tiempo << " ms" << endl;
+            tiempo = double(fin - inicio)  *1000/ CLOCKS_PER_SEC;  
+            cout << tiempo << " ms" << endl;
             break;
         }
         default:
-            cout << "Opción no válida" << endl;
             break;
     }
 
